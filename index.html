@@ -1,361 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon Mufara — Bioinformatics & ML</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simon Mufara — Bioinformatics &amp; ML</title>
 
-    :root {
-      --black: #0a0a0a;
-      --white: #ffffff;
-      --gray: #666666;
-      --light-gray: #f5f5f5;
-      --border: #e0e0e0;
-    }
+  <!-- Base/global styles (your existing site-wide rules) -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+  <!-- Page-specific styles for index (moved from old <style> block) -->
+  <link rel="stylesheet" href="css/index.css" />
 
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      padding: 1.5rem 0;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--black);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: opacity 0.3s;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.6;
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      background: var(--white);
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      padding: 0.5rem 1.2rem;
-      background: var(--black);
-      color: var(--white);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-      border-radius: 50px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -2px;
-    }
-
-    .hero p {
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      color: var(--gray);
-      margin-bottom: 3rem;
-      line-height: 1.8;
-    }
-
-    .profile-section {
-      margin: 3rem 0;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--black);
-      margin-bottom: 1.5rem;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: var(--black);
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      border-radius: 50px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-
-    /* Stats Section */
-    .stats {
-      background: var(--black);
-      color: var(--white);
-      padding: 4rem 2rem;
-    }
-
-    .stats-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 3rem;
-      text-align: center;
-    }
-
-    .stat-item h3 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-item p {
-      font-size: 1rem;
-      color: var(--gray);
-      font-weight: 500;
-    }
-
-    /* Projects Section */
-    .projects {
-      padding: 6rem 2rem;
-      background: var(--light-gray);
-    }
-
-    .section-header {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-      text-align: center;
-    }
-
-    .section-header h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      margin-bottom: 1rem;
-      letter-spacing: -1px;
-    }
-
-    .section-header p {
-      font-size: 1.2rem;
-      color: var(--gray);
-    }
-
-    .projects-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .project-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .project-img {
-      width: 100%;
-      height: 220px;
-      background: var(--light-gray);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-content {
-      padding: 1.5rem;
-    }
-
-    .project-content h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-    }
-
-    .project-content p {
-      color: var(--gray);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* Gallery Preview */
-    .gallery-preview {
-      padding: 6rem 2rem;
-      background: var(--white);
-    }
-
-    .gallery-grid {
-      max-width: 1200px;
-      margin: 3rem auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .gallery-item {
-      aspect-ratio: 1;
-      background: var(--light-gray);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .view-all {
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .view-all a {
-      color: var(--black);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      border-bottom: 2px solid var(--black);
-      padding-bottom: 4px;
-      transition: opacity 0.3s;
-    }
-
-    .view-all a:hover {
-      opacity: 0.6;
-    }
-
-    /* Footer */
-    footer {
-      background: var(--black);
-      color: var(--white);
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .social-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-
-    .social-links a:hover {
-      opacity: 0.6;
-    }
-
-    .copyright {
-      color: var(--gray);
-      font-size: 0.9rem;
-      padding-top: 2rem;
-      border-top: 1px solid #333;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links {
-        gap: 1.5rem;
-      }
-
-      .nav-links a {
-        font-size: 0.9rem;
-      }
-
-      .stats-container {
-        gap: 2rem;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <!-- UX layer (progress bar, cursor, reveal, theme toggle) -->
+  <link rel="stylesheet" href="css/ux.css" />
 </head>
 <body>
+  <!-- UX elements (immediately after <body>) -->
+  <div class="scroll-progress"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
@@ -371,108 +36,107 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-tag">Bioinformatics & Computational Biologist Specialist</div>
-      <h1>Building Healthcare Solutions Through Data & Machine Learning</h1>
-      <p>Creating genomics pipelines and ML systems that drive measurable impact in African & Global Healthcare</p>
-      
-      <div class="profile-section">
-        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.47.jpeg" alt="Simon Mufara" class="profile-img">
+    <div class="hero-content reveal">
+      <div class="hero-tag">Bioinformatics Systems Engineer</div>
+      <h1>Building Data-Driven Healthcare Systems</h1>
+      <p>Designing genomic pipelines and interactive analytics systems that improve clinical decision-making across African healthcare</p>
+
+      <div id="about" class="profile-section">
+        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.47.jpeg" alt="Simon Mufara portrait" class="profile-img" />
         <h3>Simon Mufara</h3>
         <p>
-  Master’s Candidate, Computational Health Informatics (UCT) <br>
-  <span style="font-size: 0.9rem; opacity: 0.8;">
-    Bioinformatics Honours Graduate (2025)
-  </span>
-</p>
-      
+          Master’s Candidate, Computational Health Informatics (UCT) <br />
+          <span style="font-size: 0.9rem; opacity: 0.8;">Bioinformatics Honours Graduate (2025)</span>
+        </p>
+      </div>
+
       <a href="#projects" class="cta-button">Explore My Work</a>
     </div>
   </section>
 
   <!-- Stats Section -->
   <section class="stats">
-    <div class="stats-container">
+    <div class="stats-container reveal">
       <div class="stat-item">
         <h3>3+</h3>
-        <p>Years Experience</p>
+        <p>Years Bioinformatics</p>
       </div>
       <div class="stat-item">
         <h3>10+</h3>
-        <p>Genomic Pipelines</p>
+        <p>Genomic Pipelines & Dashboards</p>
       </div>
       <div class="stat-item">
-        <h3>1000+</h3>
-        <p>Samples Processed</p>
+        <h3>5+</h3>
+        <p>Analytics Solutions</p>
       </div>
     </div>
   </section>
 
- <!-- Projects Section -->
-<section id="projects" class="projects">
-  <div class="section-header">
-    <h2>Featured Projects</h2>
-    <p>Innovative solutions in bioinformatics and healthcare analytics</p>
-  </div>
-  
-  <div class="projects-grid">
-    <div class="project-card" onclick="location.href='projects/variant.html'">
-      <div class="project-img">🧬</div>
-      <div class="project-content">
-        <h3>MTB Variant Pipeline</h3>
-        <p>Comprehensive tuberculosis whole genome sequencing pipeline for drug resistance detection</p>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="section-header reveal">
+      <h2>Featured Projects</h2>
+      <p>Genomics pipelines, machine learning models, and analytics systems</p>
+    </div>
+
+    <div class="projects-grid reveal">
+      <div class="project-card" onclick="location.href='projects/variant.html'">
+        <div class="project-img">🧬</div>
+        <div class="project-content">
+          <h3>MTB Variant Pipeline</h3>
+          <p>Comprehensive tuberculosis whole genome sequencing pipeline for drug resistance detection</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="location.href='projects/transformer.html'">
+        <div class="project-img">🤖</div>
+        <div class="project-content">
+          <h3>bc_transformer Model</h3>
+          <p>Advanced transformer-based model for predicting breast cancer drug response</p>
+        </div>
+      </div>
+
+      <div class="project-card featured" onclick="location.href='projects/equity.html'">
+        <div class="project-img">📊</div>
+        <div class="project-content">
+          <h3>Health Analytics Systems</h3>
+          <p>Interactive Power BI & Looker Studio dashboards for real-time healthcare analytics and decision support</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="location.href='projects/pediatric.html'">
+        <div class="project-img">💼</div>
+        <div class="project-content">
+          <h3>Pediatric Healthcare</h3>
+          <p>Early childhood development and health education in major Johannesburg hospitals</p>
+        </div>
       </div>
     </div>
-    
-    <div class="project-card" onclick="location.href='projects/transformer.html'">
-      <div class="project-img">🤖</div>
-      <div class="project-content">
-        <h3>bc_transformer Model</h3>
-        <p>Advanced transformer-based model for predicting breast cancer drug response</p>
-      </div>
-    </div>
-    
-    <div class="project-card" onclick="location.href='projects/equity.html'">
-      <div class="project-img">📊</div>
-      <div class="project-content">
-        <h3>Health Dashboards</h3>
-        <p>Interactive Looker Studio & Power BI dashboards for healthcare analytics</p>
-      </div>
-    </div>
-    
-    <div class="project-card" onclick="location.href='projects/pediatric.html'">
-      <div class="project-img">💼</div>
-      <div class="project-content">
-        <h3>Pediatric Healthcare</h3>
-        <p>Early childhood development and health education in major Johannesburg hospitals</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Gallery Preview -->
   <section class="gallery-preview">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>In Action</h2>
       <p>Moments from conferences, research, and professional development</p>
     </div>
-    
-    <div class="gallery-grid">
+
+    <div class="gallery-grid reveal">
       <div class="gallery-item">
-        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48 (1).jpeg" alt="Gallery 1">
+        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48 (1).jpeg" alt="Gallery 1" />
       </div>
       <div class="gallery-item">
-        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48 (2).jpeg" alt="Gallery 2">
+        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48 (2).jpeg" alt="Gallery 2" />
       </div>
       <div class="gallery-item">
-        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48 (3).jpeg" alt="Gallery 3">
+        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48 (3).jpeg" alt="Gallery 3" />
       </div>
       <div class="gallery-item">
-        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48.jpeg" alt="Gallery 4">
+        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.48.jpeg" alt="Gallery 4" />
       </div>
     </div>
-    
-    <div class="view-all">
+
+    <div class="view-all reveal">
       <a href="gallery.html">View Full Gallery →</a>
     </div>
   </section>
@@ -482,78 +146,28 @@
     <div class="footer-content">
       <div class="social-links">
         <a href="mailto:your.email@example.com">Email</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
       <div class="copyright">
         © 2026 Azwinndini Simon Mufara. All rights reserved.
       </div>
     </div>
   </footer>
-  <a href="https://wa.me/27620552382?text=Hi%20Simon,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect!" 
-   class="whatsapp-float" 
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat on WhatsApp">
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="white">
-    <path d="M20.1 8.6c-6.3 0-11.5 5.1-11.5 11.5 0 2 .5 3.9 1.5 5.5l-1.6 5.9 6-1.6c1.6.9 3.4 1.4 5.3 1.4 6.3 0 11.5-5.1 11.5-11.5-.1-6.3-5.2-11.2-11.2-11.2zm6.6 16.5c-.3.8-1.5 1.5-2.5 1.7-.7.1-1.5.2-4.4-1-3.7-1.5-6.1-5.2-6.3-5.5-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.3-.4.7-.5 1-.5.2 0 .5 0 .7.1.2.1.5.1.8.7.3.7 1 2.5 1.1 2.7.1.2.2.4.0.7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.5 1.3 2.7 1.7 3.1 1.9.4.2.6.1.8-.1.2-.2 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.3.1 1.5-.2 2.3z"/>
-  </svg>
-</a>
 
-<style>
-/* WhatsApp Floating Button Styles */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
-}
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/27620552382?text=Hi%20Simon,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect!"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="white" aria-hidden="true">
+      <path d="M20.1 8.6c-6.3 0-11.5 5.1-11.5 11.5 0 2 .5 3.9 1.5 5.5l-1.6 5.9 6-1.6c1.6.9 3.4 1.4 5.3 1.4 6.3 0 11.5-5.1 11.5-11.5-.1-6.3-5.2-11.2-11.2-11.2zm6.6 16.5c-.3.8-1.5 1.5-2.5 1.7-.7.1-1.5.2-4.4-1-3.7-1.5-6.1-5.2-6.3-5.5-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.3-.4.7-.5 1-.5.2 0 .5 0 .7.1.2.1.5.1.8.7.3.7 1 2.5 1.1 2.7.1.2.2.4.0.7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.5 1.3 2.7 1.7 3.1 1.9.4.2.6.1.8-.1.2-.2 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.3.1 1.5-.2 2.3z"/>
+    </svg>
+  </a>
 
-.whatsapp-float:hover {
-  background-color: #128C7E;
-  transform: scale(1.1);
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Pulse animation to grab attention */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .whatsapp-float svg {
-    width: 30px;
-    height: 30px;
-  }
-}
-</style>
+  <!-- UX script -->
+  <script src="js/ux.js" defer></script>
 </body>
 </html>
+``

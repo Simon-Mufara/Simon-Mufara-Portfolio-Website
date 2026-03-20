@@ -1,0 +1,109 @@
+/* =========================
+   UX Layer (site-wide)
+   ========================= */
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #111;
+  z-index: 99999;
+}
+
+/* Custom cursor */
+@media (pointer: fine) {
+  body { cursor: none; }
+
+  .cursor-dot,
+  .cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+
+  .cursor-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: #111;
+  }
+
+  .cursor-ring {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    border: 2px solid rgba(17, 17, 17, 0.35);
+    transition: width .15s ease, height .15s ease, border-color .15s ease, transform .06s linear;
+  }
+
+  /* Hover state */
+  body.cursor-hover .cursor-ring {
+    width: 48px;
+    height: 48px;
+    border-color: rgba(17, 17, 17, 0.55);
+  }
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { transition: none; transform: none; opacity: 1; }
+  .scroll-progress { display: none; }
+  .cursor-dot, .cursor-ring { display: none !important; }
+}
+
+/* Dark mode (optional toggle) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] body {
+  background: #0b0b0b;
+  color: #f3f3f3;
+}
+
+:root[data-theme="dark"] .scroll-progress {
+  background: #f3f3f3;
+}
+
+/* Small floating toggle button */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 99997;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  background: rgba(20,20,20,0.75);
+  border-color: rgba(255,255,255,0.15);
+  color: #f3f3f3;
+}

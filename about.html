@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Simon Mufara</title>
+
+  <!-- Base global styles -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- UX Layer Styles -->
+  <link rel="stylesheet" href="css/ux.css">
 </head>
 <body>
+
+  <!-- UX Elements -->
+  <div class="scroll-progress"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+
   <!-- Navigation -->
   <nav class="main-nav">
     <div class="nav-container">
@@ -25,45 +37,58 @@
   <!-- About Content -->
   <div class="page-container">
     <div class="about-section">
-      <div class="about-hero">
-        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.47.jpeg" alt="Simon Mufara">
+
+      <!-- About Hero -->
+      <div class="about-hero reveal">
+        <img src="assets/images/WhatsApp Image 2025-11-25 at 22.54.47.jpeg" alt="Profile Photo" style="border-radius: 50%; width: 160px; height:160px; object-fit:cover;">
         <h1>About Me</h1>
-        <p style="font-size: 1.2rem; color: var(--gray); max-width: 700px; margin: 1rem auto;">Aspiring bioinformatician passionate about solving Africa's most pressing health challenges through data-driven innovation</p>
+        <p style="font-size: 1.2rem; color: var(--gray); max-width: 700px; margin: 1rem auto;">
+          Systems-minded bioinformatician aspiring to engineer data-driven solutions for Africa's healthcare challenges through genomics, analytics, and software design.
+        </p>
       </div>
 
-      <div class="about-content">
+      <!-- About Text -->
+      <div class="about-content reveal">
+
         <h2>Background</h2>
-        <p>With a background in Health System Sciences from the University of the Witwatersrand and current Honours in Bioinformatics from the University of Cape Town, I specialize in applying computational tools to improve disease understanding, diagnostics, and treatment across diverse populations.</p>
+        <p>
+          With training in Health System Sciences and Honours in Bioinformatics, I specialize in designing genomic pipelines and analytics systems that improve disease understanding, clinical diagnostics, and treatment decisions. My expertise bridges computational biology with systems thinking and data visualization.
+        </p>
 
         <h3>Core Strengths</h3>
         <ul>
-          <li><strong>Genomic Data Analysis</strong> — Experience in variant calling, differential gene expression, and multi-omics data integration using tools like bcftools, samtools, GATK, vcftools, and annotation pipelines</li>
-          <li><strong>Programming & Statistical Tools</strong> — Proficient in Python, R, Bioconductor, Scipy, and Seaborn for data visualization, machine learning (e.g., drug response prediction), and biological data interpretation</li>
-          <li><strong>Research & Collaboration</strong> — Over two years' experience in public health research, including global pharmaceutical engagements (Janssen) and hospital-based paediatric support (Reach For A Dream). Contributor to the Malawi National Trauma Policy White Paper</li>
-          <li><strong>Leadership & Recognition</strong> — Named one of South Africa's Top 10 GradStar Finalists (2024), recognizing excellence and leadership potential among future industry leaders</li>
+          <li><strong>Genomic Data Analysis</strong> — Experience in variant calling, differential expression, and multi-omics data integration using bcftools, samtools, GATK, vcftools, and annotation pipelines.</li>
+
+          <li><strong>Programming & Statistical Tools</strong> — Python, R, Bioconductor, SciPy, Seaborn for ML, visualization, and biological interpretation.</li>
+
+          <li><strong>Research & Collaboration</strong> — 2+ years in public health research, global pharma collaborations (Janssen), and hospital-based paediatric support (Reach For A Dream).</li>
+
+          <li><strong>Leadership & Recognition</strong> — Top 10 GradStar Finalist (2024), recognized for leadership and excellence.</li>
         </ul>
 
         <h3>Technical Skills</h3>
         <ul>
-          <li><strong>Programming & Data Analysis</strong> — Python (pandas, scikit-learn, PyTorch, transformers), R (tidyverse, Seurat, DESeq2), SQL, Bash/Linux, Jupyter</li>
-          <li><strong>Bioinformatics & Genomics Tools</strong> — bcftools, samtools, Snakemake, SnpEff, VEP</li>
-          <li><strong>Data Visualization & Analytics</strong> — Python (matplotlib, seaborn), R (ggplot2), Excel, Power BI</li>
-          <li><strong>Collaboration</strong> — Coordinated with cross-functional teams and researchers to integrate data insights</li>
-          <li><strong>Communication</strong> — Delivered presentations and reports to academic, industry, and executive stakeholders</li>
-          <li><strong>Project Management</strong> — Led research workflows and multi-step analyses ensuring reproducibility and quality</li>
+          <li><strong>Data Visualization & Analytics</strong> — Power BI, Looker Studio, matplotlib, seaborn, ggplot2, Excel for strategic dashboards and insights.</li>
+          <li><strong>Programming & Data Analysis</strong> — Python (pandas, sklearn, PyTorch), R (tidyverse, Seurat, DESeq2), SQL, Bash, Jupyter.</li>
+          <li><strong>Bioinformatics Tools</strong> — bcftools, samtools, Snakemake, SnpEff, VEP for genomic pipeline development.</li>
+          <li><strong>Systems Design</strong> — Healthcare data architecture, ETL workflows, real-time dashboarding systems.</li>
+          <li><strong>Collaboration</strong> — Worked with multidisciplinary academic and industry teams across bioinformatics and analytics.</li>
+          <li><strong>Communication</strong> — Presentations to academic, clinical, and executive stakeholders; translating complex data into actionable insights.</li>
         </ul>
 
         <h3>Awards & Recognition</h3>
         <ul>
-          <li><strong>Top 10 Most Employable Graduate</strong> — GradStar (Dec 2024): Out of 500 graduates, narrowed to top 100 for 3-day workshop; earned trophy and top 10 spot</li>
-          <li><strong>Power BI Essential Training</strong> — LinkedIn Learning (Aug 2025): Learned data modeling, DAX formulas, interactive dashboards, and visualization best practices</li>
-          <li><strong>Certificate of Participation</strong> — Public Health Alliance for Genomic Epidemiology (PHA4GE) (Oct 2025)</li>
-          <li><strong>Microsoft Azure AI Essentials</strong> — Workloads and Machine Learning on Azure (Oct 2025)</li>
+          <li><strong>Top 10 Most Employable Graduate</strong> — GradStar (Dec 2024)</li>
+          <li><strong>Power BI Essential Training</strong> — LinkedIn Learning (Aug 2025)</li>
+          <li><strong>PHA4GE Certificate of Participation</strong> — Pathogen Host and Environment Global Edition (Oct 2025)</li>
+          <li><strong>Microsoft Azure AI Essentials</strong> — Cloud Computing Fundamentals (Oct 2025)</li>
+          <li><strong>Master's Candidate</strong> — Computational Health Informatics, University of Cape Town (2025-2026)</li>
         </ul>
 
         <div style="text-align: center; margin-top: 3rem;">
           <a href="assets/Simon_Mufara_Resume.pdf" class="cta-button" download>Download Full CV</a>
         </div>
+
       </div>
     </div>
   </div>
@@ -77,74 +102,32 @@
         <a href="https://github.com/simon-mufara" target="_blank">GitHub</a>
       </div>
       <div class="copyright">
-        © 2025 Simon Mufara. All rights reserved.
+        © 2026 Simon Mufara. All rights reserved.
       </div>
     </div>
   </footer>
-  <a href="https://wa.me/27620552382?text=Hi%20Simon,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect!" 
-   class="whatsapp-float" 
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat on WhatsApp">
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="white">
-    <path d="M20.1 8.6c-6.3 0-11.5 5.1-11.5 11.5 0 2 .5 3.9 1.5 5.5l-1.6 5.9 6-1.6c1.6.9 3.4 1.4 5.3 1.4 6.3 0 11.5-5.1 11.5-11.5-.1-6.3-5.2-11.2-11.2-11.2zm6.6 16.5c-.3.8-1.5 1.5-2.5 1.7-.7.1-1.5.2-4.4-1-3.7-1.5-6.1-5.2-6.3-5.5-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.3-.4.7-.5 1-.5.2 0 .5 0 .7.1.2.1.5.1.8.7.3.7 1 2.5 1.1 2.7.1.2.2.4.0.7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.5 1.3 2.7 1.7 3.1 1.9.4.2.6.1.8-.1.2-.2 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.3.1 1.5-.2 2.3z"/>
-  </svg>
-</a>
 
-<style>
-/* WhatsApp Floating Button Styles */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
-}
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/27620552382?text=Hi%20Simon,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect!"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="white">
+      <path d="M20.1 8.6c-6.3 0-11.5 5.1-11.5 11.5 0 2 .5 3.9 
+              1.5 5.5l-1.6 5.9 6-1.6c1.6.9 3.4 1.4 5.3 1.4 
+              6.3 0 11.5-5.1 11.5-11.5-.1-6.3-5.2-11.2-11.2-11.2zm6.6 
+              16.5c-.3.8-1.5 1.5-2.5 1.7-.7.1-1.5.2-4.4-1-3.7-1.5-6.1-5.2-6.3-5.5-.2-.3-1.6-2.1-1.6-4s1-2.8 
+              1.4-3.2c.3-.4.7-.5 1-.5.2 0 .5 0 .7.1.2.1.5.1.8.7.3.7 1 2.5 
+              1.1 2.7.1.2.2.4.0.7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 
+              1 1.6 2.1 2.6 1.5 1.3 2.7 1.7 3.1 1.9.4.2.6.1.8-.1.2-.2 
+              1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.3.1 
+              1.5-.2 2.3z"/>
+    </svg>
+  </a>
 
-.whatsapp-float:hover {
-  background-color: #128C7E;
-  transform: scale(1.1);
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-}
+  <!-- UX Script -->
+  <script src="js/ux.js" defer></script>
 
-/* Pulse animation to grab attention */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .whatsapp-float svg {
-    width: 30px;
-    height: 30px;
-  }
-}
-</style>
 </body>
 </html>

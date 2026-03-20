@@ -12,6 +12,7 @@
   --gray: #666666;
   --light-gray: #f5f5f5;
   --border: #e0e0e0;
+  --accent: #1a9b8e;
 }
 
 body {
@@ -60,14 +61,14 @@ body {
   color: var(--black);
   font-weight: 500;
   font-size: 0.95rem;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, color 0.3s;
   padding-bottom: 2px;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  opacity: 0.6;
-  border-bottom: 2px solid var(--black);
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 /* Hero Section */
@@ -135,12 +136,13 @@ body {
   font-weight: 600;
   font-size: 1rem;
   border-radius: 50px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  background-color: var(--accent);
 }
 
 /* Stats Section */
@@ -216,7 +218,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   cursor: pointer;
   padding: 1.5rem;
 }
@@ -224,6 +226,15 @@ body {
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.project-card.featured {
+  border-left: 4px solid var(--accent);
+}
+
+.project-card.featured:hover {
+  border-left-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(26, 155, 142, 0.15);
 }
 
 .project-card.card {

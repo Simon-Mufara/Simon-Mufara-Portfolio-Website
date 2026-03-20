@@ -1,97 +1,308 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Simon Mufara</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .projects-grid .project-card {
-      cursor: pointer;
-    }
-    .projects-grid .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
+<!-- ===========================
+   HERO TECH STACK SECTION
+   =========================== -->
+<section class="tech-hero reveal" style="
+  width: 100%;
+  padding: 5rem 2rem;
+  background: linear-gradient(145deg, #1e1b4b, #0f172a);
+  color: #fff;
+  margin-bottom: 4rem;
+">
+  <div class="tech-hero-container" style="
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+  ">
+
+    <h1 style="
+      font-size: 2.8rem;
+      font-weight: 800;
       margin-bottom: 1rem;
-    }
-    .projects-grid .project-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-    }
-    .projects-grid .project-card p {
-      color: var(--gray);
-      font-size: 0.95rem;
+      letter-spacing: -1px;
+    ">Core Technical Stack</h1>
+
+    <p style="
+      max-width: 700px;
+      font-size: 1.1rem;
+      color: #c6c6c6;
+      margin-bottom: 3rem;
       line-height: 1.6;
-      margin: 0.5rem 0;
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <div class="nav-container">
-      <div class="logo">SIMON MUFARA</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="certificates.html">Certificates</a></li>
-      </ul>
-    </div>
-  </nav>
+    ">
+      The tools, languages, and workflows I use to build genomic analysis pipelines, machine learning models,
+      and reproducible computational biology systems.
+    </p>
 
-  <!-- Projects Content -->
-  <div class="page-container">
-    <div class="section-header">
-      <h1>All Projects</h1>
-      <p>Click any project to view full details</p>
-    </div>
+    <!-- GROUPED STACK -->
+    <div class="tech-groups">
 
-    <div class="projects-grid">
-      <!-- Transformer Project -->
-      <div class="project-card" onclick="location.href='projects/transformer.html'">
-        <img src="https://journals.plos.org/ploscompbiol/article/figure/image?size=medium&id=10.1371/journal.pcbi.1012905.g008" alt="Transformer Model">
+      <!-- GROUP 1: Programming Languages -->
+      <div class="tech-group reveal">
+        <div class="tech-group-title">Programming Languages</div>
+        <div class="tech-badges">
+
+          <!-- Python -->
+          <div class="tech-badge">
+            <!-- ICON: Insert your python.svg inline here -->
+            <svg width="24" height="24"><!-- python icon here --></svg>
+            <span>Python</span>
+          </div>
+
+          <!-- R -->
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- r icon here --></svg>
+            <span>R</span>
+          </div>
+
+          <!-- Bash -->
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- bash icon --></svg>
+            <span>Bash</span>
+          </div>
+
+          <!-- SQL -->
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- sql icon --></svg>
+            <span>SQL</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 2: Machine Learning & AI -->
+      <div class="tech-group reveal">
+        <div class="tech-group-title">AI / Machine Learning</div>
+        <div class="tech-badges">
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- pytorch icon --></svg>
+            <span>PyTorch</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- tensorflow --></svg>
+            <span>TensorFlow</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- sklearn --></svg>
+            <span>Scikit‑learn</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- numpy --></svg>
+            <span>NumPy</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- pandas --></svg>
+            <span>Pandas</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 3: Bioinformatics Tools -->
+      <div class="tech-group reveal">
+        <div class="tech-group-title">Bioinformatics Tooling</div>
+        <div class="tech-badges">
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- bcftools --></svg>
+            <span>bcftools</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- samtools --></svg>
+            <span>samtools</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- bowtie2 --></svg>
+            <span>Bowtie2</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- bwa --></svg>
+            <span>BWA</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- minimap2 --></svg>
+            <span>Minimap2</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- fastqc --></svg>
+            <span>FastQC</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- multiqc --></svg>
+            <span>MultiQC</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- snpeff --></svg>
+            <span>SnpEff</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- vep --></svg>
+            <span>VEP</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 4: Workflow Engines -->
+      <div class="tech-group reveal">
+        <div class="tech-group-title">Workflow Engines</div>
+        <div class="tech-badges">
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- snakemake --></svg>
+            <span>Snakemake</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- nextflow --></svg>
+            <span>Nextflow</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- cromwell --></svg>
+            <span>Cromwell</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- cwl --></svg>
+            <span>CWL</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 5: Galaxy Platform -->
+      <div class="tech-group reveal">
+        <div class="tech-group-title">Galaxy Platform</div>
+        <div class="tech-badges">
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- galaxy logo --></svg>
+            <span>Galaxy</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- galaxy workflows --></svg>
+            <span>Galaxy Workflows</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- galaxy RNA --></svg>
+            <span>Galaxy RNA‑seq</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 6: Cloud & HPC -->
+      <div class="tech-group reveal">
+        <div class="tech-group-title">Cloud & HPC</div>
+        <div class="tech-badges">
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- azure --></svg>
+            <span>Azure</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- aws --></svg>
+            <span>AWS</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- gcp --></svg>
+            <span>GCP</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- docker --></svg>
+            <span>Docker</span>
+          </div>
+
+          <div class="tech-badge">
+            <svg width="24" height="24"><!-- singularity --></svg>
+            <span>Singularity</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===========================
+   PROJECTS HEADER + GRID
+   (place this directly after the Tech Stack Hero section)
+   =========================== -->
+
+<div class="page-container">
+  <!-- Section Header -->
+  <div class="section-header reveal">
+    <h1>All Projects</h1>
+    <p>Click any project to view full details</p>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="projects-grid reveal">
+    <!-- Transformer Project -->
+    <div class="project-card" onclick="location.href='projects/transformer.html'">
+      <div class="project-img" style="display:flex; align-items:center; justify-content:center; font-size:3rem;">🤖</div>
+      <div class="project-content">
         <h3>bc_transformer Model</h3>
         <p><strong>Transformer-Based Multi-Omics Drug Response Prediction</strong></p>
         <p>Developing a transformer-based multi-omics drug response prediction model for African breast cancer patients. Applied transfer learning to fine-tune models on African-specific TNBC and HER2+ cohorts.</p>
         <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Jan 2025 - Dec 2025 | <strong>Institution:</strong> University of Cape Town</p>
       </div>
+    </div>
 
-      <!-- Variant Calling Project -->
-      <div class="project-card" onclick="location.href='projects/variant.html'">
-        <img src="https://www.biocode.org.uk/wp-content/uploads/2023/02/Course-Thumbnail-for-Cancer-Genomics-NGS-Whole-Exam-Sequencing-Variant-Calling-Using-Linux-scaled-e1677150883454.webp" alt="MTB Variant Pipeline">
+    <!-- Variant Calling Project -->
+    <div class="project-card" onclick="location.href='projects/variant.html'">
+      <div class="project-img" style="display:flex; align-items:center; justify-content:center; font-size:3rem;">🧬</div>
+      <div class="project-content">
         <h3>MTB Variant Calling Pipeline</h3>
         <p><strong>Mycobacterium tuberculosis WGS Analysis</strong></p>
         <p>Performed end-to-end variant calling on 5+ M. tuberculosis clinical isolates using bcftools, samtools, and Snakemake. Annotated variants with SnpEff and achieved 98% QC score.</p>
         <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Mar 2025 - Jun 2025 | <strong>Organization:</strong> H3D, Cape Town</p>
       </div>
+    </div>
 
-      <!-- Global Health Equity -->
-      <div class="project-card" onclick="location.href='projects/equity.html'">
-        <img src="https://supermetrics.com/cdn-cgi/image/onerror=redirect,width=1510,height=942,format=png/https://cdn.sanity.io/images/8ly2m84z/production-2025/60bb12ef3bc0dc52f10c537d35818423638a8e9a-1510x942.png?w=1510&h=942&fit=max" alt="Health Dashboards">
+    <!-- Global Health Equity -->
+    <div class="project-card" onclick="location.href='projects/equity.html'">
+      <div class="project-img" style="display:flex; align-items:center; justify-content:center; font-size:3rem;">📊</div>
+      <div class="project-content">
         <h3>Global Health Equity Program</h3>
-        <p><strong>Healthcare Access & Data Analytics</strong></p>
+        <p><strong>Healthcare Access &amp; Data Analytics</strong></p>
         <p>Presented strategic vision to CEO and senior leadership. Supported 3 healthcare access programs across Sub-Saharan Africa, impacting ~10,000 patients. Developed 5+ dashboards and reports.</p>
-        <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Jan 2024 - Dec 2024 | <strong>Organization:</strong> Johnson & Johnson, Midrand</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Jan 2024 - Dec 2024 | <strong>Organization:</strong> Johnson &amp; Johnson, Midrand</p>
       </div>
+    </div>
 
-      <!-- Pediatric Internship -->
-      <div class="project-card" onclick="location.href='projects/pediatric.html'">
-        <img src="https://ccr.cancer.gov/sites/default/files/styles/half_4_3/public/2021-07/Peds%20patient.jpg?itok=pJUTOv3e" alt="Pediatric Care">
+    <!-- Pediatric Internship -->
+    <div class="project-card" onclick="location.href='projects/pediatric.html'">
+      <div class="project-img" style="display:flex; align-items:center; justify-content:center; font-size:3rem;">💼</div>
+      <div class="project-content">
         <h3>Early Childhood Development</h3>
-        <p><strong>Oncology & Nephrology Internship</strong></p>
+        <p><strong>Oncology &amp; Nephrology Internship</strong></p>
         <p>Supervised pediatric wards at Chris Hani Baragwanath Hospital and Charlotte Maxeke Johannesburg Academic Hospital. Managed 200+ Electronic Medical Records and delivered 10+ health education sessions monthly.</p>
         <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Jan 2023 - Dec 2023 | <strong>Organization:</strong> Reach For A Dream, Johannesburg</p>
       </div>
+    </div>
 
-      <!-- EH!Woza Facilitator -->
-      <div class="project-card" onclick="location.href='projects/facilitator.html'">
-        <div style="width: 100%; height: 200px; background: var(--light-gray); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 4rem; margin-bottom: 1rem;">🎓</div>
+    <!-- EH!Woza Facilitator -->
+    <div class="project-card" onclick="location.href='projects/facilitator.html'">
+      <div class="project-img" style="display:flex; align-items:center; justify-content:center; font-size:3rem;">🎓</div>
+      <div class="project-content">
         <h3>EH!Woza Science Workshops</h3>
         <p><strong>Community Science Education</strong></p>
         <p>Facilitated 5+ interactive science workshops for township students on HIV/TB awareness. Designed and delivered monthly youth engagement sessions, reaching 50+ students per session.</p>
@@ -99,84 +310,4 @@
       </div>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="social-links">
-        <a href="mailto:simon.mufara1@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/simon-mufara" target="_blank">LinkedIn</a>
-        <a href="https://github.com/simon-mufara" target="_blank">GitHub</a>
-      </div>
-      <div class="copyright">
-        © 2025 Simon Mufara. All rights reserved.
-      </div>
-    </div>
-  </footer>
-  <a href="https://wa.me/27620552382?text=Hi%20Simon,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect!" 
-   class="whatsapp-float" 
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat on WhatsApp">
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="white">
-    <path d="M20.1 8.6c-6.3 0-11.5 5.1-11.5 11.5 0 2 .5 3.9 1.5 5.5l-1.6 5.9 6-1.6c1.6.9 3.4 1.4 5.3 1.4 6.3 0 11.5-5.1 11.5-11.5-.1-6.3-5.2-11.2-11.2-11.2zm6.6 16.5c-.3.8-1.5 1.5-2.5 1.7-.7.1-1.5.2-4.4-1-3.7-1.5-6.1-5.2-6.3-5.5-.2-.3-1.6-2.1-1.6-4s1-2.8 1.4-3.2c.3-.4.7-.5 1-.5.2 0 .5 0 .7.1.2.1.5.1.8.7.3.7 1 2.5 1.1 2.7.1.2.2.4.0.7-.1.3-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.5 1.3 2.7 1.7 3.1 1.9.4.2.6.1.8-.1.2-.2 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.3.1 1.5-.2 2.3z"/>
-  </svg>
-</a>
-
-<style>
-/* WhatsApp Floating Button Styles */
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-  background-color: #128C7E;
-  transform: scale(1.1);
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Pulse animation to grab attention */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .whatsapp-float svg {
-    width: 30px;
-    height: 30px;
-  }
-}
-</style>
-</body>
-</html>
+</div>
