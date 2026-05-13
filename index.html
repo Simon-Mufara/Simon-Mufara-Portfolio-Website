@@ -19,12 +19,13 @@
   <div class="scroll-progress"></div>
   <div class="cursor-dot"></div>
   <div class="cursor-ring"></div>
-  <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙 Dark</button>
 
   <!-- Navigation -->
-  <nav>
+  <nav class="main-nav">
     <div class="nav-container">
       <div class="logo">AZWINNDINI SIMON MUFARA</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -68,6 +69,42 @@
       <div class="stat-item">
         <h3>5+</h3>
         <p>Analytics Solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Roles (added placeholder for new skills) -->
+  <section id="skills" class="skills">
+    <div class="section-header reveal">
+      <h2>Skills & Roles</h2>
+      <p>Technical skills and roles — edit to add your latest details</p>
+    </div>
+    <div class="page-container reveal">
+      <div class="skills-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+        <div style="background:var(--white);border:1px solid var(--border);padding:1rem;border-radius:12px;">
+          <h4>Technical</h4>
+          <ul style="color:var(--gray);margin-top:8px;">
+            <li>Bioinformatics pipelines (Snakemake, samtools, bcftools)</li>
+            <li>Machine learning & transformer models</li>
+            <li>Data visualization & dashboards (Power BI, Looker)</li>
+          </ul>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);padding:1rem;border-radius:12px;">
+          <h4>Roles</h4>
+          <ul style="color:var(--gray);margin-top:8px;">
+            <li>Systems Engineer — Genomics platforms</li>
+            <li>Data Analyst / Dashboarding</li>
+            <li>Workshop Facilitator & Mentor</li>
+          </ul>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);padding:1rem;border-radius:12px;">
+          <h4>Tools</h4>
+          <ul style="color:var(--gray);margin-top:8px;">
+            <li>Python, R, Bash</li>
+            <li>Docker, Git, CI/CD</li>
+            <li>SQL, Postgres</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -167,6 +204,7 @@
   </a>
 
   <!-- UX script -->
+  <script src="js/scripts.js" defer></script>
   <script src="js/ux.js" defer></script>
 </body>
 </html>

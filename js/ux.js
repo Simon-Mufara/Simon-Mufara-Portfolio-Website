@@ -88,4 +88,15 @@
     const current = root.getAttribute("data-theme") || "light";
     toggle.textContent = current === "dark" ? "☀️ Light" : "🌙 Dark";
   }
+
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    // close nav when a link is clicked
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  }
 })();

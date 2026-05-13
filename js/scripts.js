@@ -1,12 +1,5 @@
 // scripts.js — FINAL FIXED VERSION (keeps your original style + fixes gallery forever + project details)
-const themeToggle = document.getElementById('theme-toggle');
-const saved = localStorage.getItem('site-theme') || 'dark';
-function setTheme(t){document.body.setAttribute('data-theme', t);localStorage.setItem('site-theme', t);} 
-setTheme(saved);
-themeToggle && themeToggle.addEventListener('click', ()=>{
-  const next = (document.body.getAttribute('data-theme')||'dark') === 'dark' ? 'light' : 'dark';
-  setTheme(next);
-});
+// Theme is handled by `js/ux.js` (theme toggle and data-theme storage).
 
 // Projects data (brief as in CV screenshots, updated with PDF details)
 const projects = [
